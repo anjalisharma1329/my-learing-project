@@ -1,17 +1,25 @@
 <h1>login works!</h1>
 <div class="row">
-  <div class="col-md-6">
-    <form class="example-form">
+  <div class="col-md-4">
+    <form class="example-form" #userForm="ngForm" (ngSubmit)="loginData(userForm.value)">
       <mat-form-field class="example-full-width">
         <mat-label>Email ID</mat-label>
-        <input matInput placeholder="Email ID">
+        <input matInput placeholder="Email ID" name="emailid" ngModel>
       </mat-form-field>
       <mat-form-field class="example-full-width">
-        <mat-label>Password</mat-label>
-        <input matInput placeholder="Password">
+        <mat-label>Location</mat-label>
+        <mat-select > 
+          <mat-option *ngFor="let location of locations" name="{{location}}" ngModel>
+            {{location}}
+          </mat-option>
+        </mat-select>
       </mat-form-field>
-      <button mat-raised-button color="primary">Submit</button>
+      <mat-form-field class="example-full-width" >
+        <mat-label>Password</mat-label>
+        <input matInput placeholder="Password" ngModel name="pwd">
+      </mat-form-field>
+      <button mat-raised-button color="primary" type="submit">Submit</button>
     </form>
   </div>
-  <div class="col-md-6"></div>
+  <div class="col-md-8"></div>
 </div>

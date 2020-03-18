@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MyserviceService } from './myservice.service';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+
 
 //Angular material component
 import {MatButtonModule} from '@angular/material/button';
@@ -35,6 +37,7 @@ import { IfelseComponent } from './ifelse/ifelse.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    FormsModule,
 
     //Angular material component
     MatButtonModule,
