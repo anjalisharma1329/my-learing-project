@@ -1,0 +1,9 @@
+<h1>ifelse works!</h1>
+<div *ngIf="isShowHide; then condition1 else condition2"></div>
+<button mat-raised-button color="primary" (click)="ifelsefunction($event)">Toggle</button>
+<ng-template #condition1>
+  <p>show data1</p>
+</ng-template>
+<ng-template #condition2>
+  <p>show data2</p>
+</ng-template>
